@@ -1,0 +1,29 @@
+body {
+    background-color: #219C90;
+}
+#listItems{
+    display:inline-block;
+    background-color: #F5F5DC;
+    width: 22%;
+}
+.date{
+    display: inline-block;
+    background-color: #D83F31;
+    color: whitesmoke;
+    width: 22%;
+    text-align: center;
+    border-radius: 20px;
+}
+.work{
+    display: inline-block;
+    background-color: black;
+    color: antiquewhite;
+}
+.addtask{
+    border-radius: 20px;
+    background-color: #EE9322;
+    color: whitesmoke;
+}
+.taskinput{
+    border-radius: 20px;
+}

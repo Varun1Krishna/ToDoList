@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+
+<head>
+    <link rel="stylesheet" href="styles/index.css"/>
+</head>
+
+<div class="container">
+    <div class="work">
+        Work List
+    </div>
+
+    <% for(let i in locals.task){ %>
+        <li style="list-style: none;" id="listItems">
+            <input type="checkbox" name="check" onchange="strikeThrough(this)"/><span><%= task[i] %></span>
+        </li>
+    <% } %>
+    <hr style="width:22%"></hr>
+    <form action="/addtask2" method="POST">
+        <input type="text" name="newtask" placeholder="Add New Task" class="taskinput">
+        <button type="submit" class="addtask">Add Task</button>
+    </form>
+</div>
+
+<script>
+function strikeThrough(element) {
+    if (element.checked) {
+        element.nextElementSibling.style.textDecoration = "line-through";
+        element.nextElementSibling.style.color="green";
+    } else {
+        element.nextElementSibling.style.textDecoration = "none";
+        element.nextElementSibling.style.color="none";
+    }
+}
+</script>
+
+<%- include("partials/footer.ejs") %>
